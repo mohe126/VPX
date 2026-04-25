@@ -103,7 +103,7 @@ uint16_t vpx4_mem_r16(Vpx4* vpx4, uint32_t adr){
     }
 
     uint16_t tmp;
-    memcpy(&vpx4->mem.ptr[adr], &tmp, sizeof(tmp));
+    memcpy(&tmp, &vpx4->mem.ptr[adr], sizeof(tmp));
 
     return vpx4_endian_fmt16(tmp);
 }
@@ -114,7 +114,7 @@ uint32_t vpx4_mem_r32(Vpx4* vpx4, uint32_t adr){
     }
 
     uint32_t tmp;
-    memcpy(&vpx4->mem.ptr[adr], &tmp, sizeof(tmp));
+    memcpy(&tmp, &vpx4->mem.ptr[adr], sizeof(tmp));
 
     return vpx4_endian_fmt32(tmp);
 }
